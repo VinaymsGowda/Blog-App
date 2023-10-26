@@ -1,0 +1,145 @@
+main{
+    padding: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+img{
+    max-width: 100%;
+}
+
+header{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    align-items: center;
+}
+header a{
+    text-decoration: none;
+    color: grey;
+}
+header a.logo{    
+    font-weight: bold;
+    color: #000;
+}
+
+header nav{
+    display: flex;
+    gap:14px;
+}
+
+.post{
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap:20px;
+    margin-bottom: 30px;
+}
+
+.text h2{
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.info{
+    color:#888;
+    font-weight: bold;
+}
+
+.author{
+    padding: 10px;
+}
+
+.summary{
+    margin:6px 0;
+    line-height: 1.5rem;
+}
+
+form input{
+    width: 100%;
+}
+form.login h1,form.register h1{
+    text-align: center;
+}
+
+.post a{
+    text-decoration: none;
+    color:inherit
+}
+
+.post-page>.image{
+    max-height: 310px;
+    display: flex;
+    overflow: hidden;
+}
+
+.post-page h1{
+    padding: 10px;
+    text-align: center;
+}
+
+.image img{
+    object-fit: cover;
+    padding-bottom: 30px;
+}
+
+.post-page>time{
+    text-align: center;
+    display: block;
+    font-size: 0.8rem;
+    color:#aaa;
+}
+
+.author{
+    text-align: center;
+    font-weight: bold;
+}
+
+@media screen and (min-width:768px){
+    .post{
+        grid-template-columns: .9fr 1.1fr;
+    }
+}
+
+.content{
+    line-height: 1.6rem;
+}
+
+.Operations{
+    display: inline-flex;
+    gap:20px;
+    padding-bottom: 30px;
+}
+
+.delete {
+    background-color: #D61212; /* Change to the color you desire */
+    padding: 13px;
+    border-radius: 35%;
+}
+
+a{
+    text-decoration: none;
+    color:whitesmoke
+}
+
+.edit{
+    background-color: rgb(27, 194, 38);
+    padding: 13px;
+    border-radius: 35%;
+}
+
+
+a svg{
+    text-align: center;
+    margin-left: 5px;
+    height: 20px;
+}
+
+
+.delete svg{
+    height: 15px;
+}
+
+
+
+
