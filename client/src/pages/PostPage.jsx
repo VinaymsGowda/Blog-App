@@ -85,7 +85,7 @@ export default function PostPage(){
             </div>
         )}
         <div className="image">
-            <img src={`http://localhost:4000/${postdata.file}`}/>
+            <img src={`http://localhost:4000/${postdata.file}`} alt=""/>
         </div>
         <div className="content" dangerouslySetInnerHTML={{__html:postdata.content}}/>
         </div>
