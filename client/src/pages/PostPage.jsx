@@ -10,7 +10,6 @@ export default function PostPage(){
     const {userinfo}=useContext(UserContext);
     const {id}=useParams(); //to get post id
     const [confirmdelete, setconfirmdelete] = useState(false);
-    const [redirect,setredirect]=useState(false);
     const navigate=useNavigate();
     useEffect(()=>{
         fetch(`http://localhost:4000/post/${id}`)
@@ -19,7 +18,7 @@ export default function PostPage(){
                 setpostdata(postinfo);
             });
         });
-    },[]);
+    },[id]);
 
     const handleDeleteClick = () => {
         setconfirmdelete(true);
@@ -34,7 +33,6 @@ export default function PostPage(){
             });
             if(response.ok){
                 setconfirmdelete(false);
-                setredirect(true);
                 navigate("/");
             }
         }

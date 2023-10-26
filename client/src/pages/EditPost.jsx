@@ -51,7 +51,7 @@ export default function EditPost(){
                 setsummary(postdata.summary)
             })
         })
-    },[])
+    },[id])
 
     function handletitle(event){
         settitle(event.target.value);

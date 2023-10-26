@@ -13,7 +13,7 @@ function Heading(){
       setuserinfo(userdata);
       });
     });
-  },[]);
+  },[setuserinfo]);
 
   //invalidate cookie here
   function logout(){

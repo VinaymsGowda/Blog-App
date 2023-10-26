@@ -16,7 +16,7 @@ export default function Post(props){
           <h2>{props.title}</h2>
           </Link>
           <p className="info">
-            <a className="author">{props.author.username}</a>
+            <span className="author">{props.author.username}</span>
             <time>{format(new Date(props.createdAt),'MMM d,yyyy HH:MM')}</time>
           </p>
           <p className="summary">{props.summary}</p>
