@@ -10,7 +10,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const secret=process.env.JWT_SECRET;
-const uploadMiddleware=multer({dest:'uploads/'});
+const uploadMiddleware=multer({dest:'../uploads'});
 
 const router=express.Router();
 
