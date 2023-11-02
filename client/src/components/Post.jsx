@@ -7,7 +7,7 @@ export default function Post(props){
     <div className="post">
         <div className="image">
         <Link to={`/post/${props._id}`}>
-          <img src={'http://localhost:4000/'+props.file} alt=''/>
+          <img src={'https://blog-app-q68u.onrender.com/'+props.file} alt=''/>
           </Link>
         </div>
         

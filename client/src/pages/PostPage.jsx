@@ -12,7 +12,7 @@ export default function PostPage(){
     const [confirmdelete, setconfirmdelete] = useState(false);
     const navigate=useNavigate();
     useEffect(()=>{
-        fetch(`http://localhost:4000/post/${id}`)
+        fetch(`https://blog-app-q68u.onrender.com/post/${id}`)
         .then(response=>{
             response.json().then(postinfo=>{
                 setpostdata(postinfo);
@@ -28,7 +28,7 @@ export default function PostPage(){
         // Perform the delete action here, and then close the confirmation dialog
         // You can make a DELETE request to your API endpoint to delete the post
         if(confirmdelete){
-            const response=await fetch('http://localhost:4000/post/'+id,{
+            const response=await fetch('https://blog-app-q68u.onrender.com/post/'+id,{
                 method:'DELETE',
             });
             if(response.ok){
@@ -83,7 +83,7 @@ export default function PostPage(){
             </div>
         )}
         <div className="image">
-            <img src={`http://localhost:4000/${postdata.file}`} alt=""/>
+            <img src={`https://blog-app-q68u.onrender.com/${postdata.file}`} alt=""/>
         </div>
         <div className="content" dangerouslySetInnerHTML={{__html:postdata.content}}/>
         </div>

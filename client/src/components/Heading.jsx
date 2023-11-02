@@ -6,7 +6,7 @@ function Heading(){
   const {setuserinfo,userinfo}=useContext(UserContext);
   
   useEffect(()=>{
-    fetch("http://localhost:4000/profile",{
+    fetch("https://blog-app-q68u.onrender.com/profile",{
       credentials:'include',
     }).then(response=>{
       response.json().then(userdata=>{
@@ -17,7 +17,7 @@ function Heading(){
 
   //invalidate cookie here
   function logout(){
-    fetch("http://localhost:4000/logout",{
+    fetch("https://blog-app-q68u.onrender.com/logout",{
       credentials:'include',
       method:'POST',
     });
