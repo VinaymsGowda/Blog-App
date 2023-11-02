@@ -95,11 +95,19 @@ form.login h1,form.register h1{
     font-weight: bold;
 }
 
-@media screen and (min-width:768px){
+@media screen and (min-width:750px){
     .post{
-        grid-template-columns: 1.9fr 1.1fr;
+        grid-template-columns: .9fr 1.1fr;
+    }
+    
+}
+
+@media screen and (max-width: 750px) {
+    .post {
+        grid-template-columns: .9fr 1.1fr;
     }
 }
+
 
 .content{
     line-height: 1.6rem;
