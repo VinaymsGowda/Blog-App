@@ -20,7 +20,8 @@ const app=express();
 const salt=bcrypt.genSaltSync(10);
 const secret=process.env.JWT_SECRET;
 const dbpass=process.env.password;
-app.use(cors({credentials:true,origin:'http://localhost:3000'}));
+
+app.use(cors({credentials:true,origin:'https://blog-applicatn.netlify.app'}));
 app.use(express.json());
 app.use(cookieParser());
 const __dirname=dirname(fileURLToPath(import.meta.url));
@@ -91,11 +92,12 @@ app.post("/logout", (req, res) => {
 });
 
 
-mongoose.connect(`mongodb+srv://vinaymsgowda27:${dbpass}@blog-apps.qjpowm0.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp`).
+
+mongoose.connect("mongodb+srv://vinaymsgowda27:vinayms@blog-apps.qjpowm0.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp").
 then(app.listen(port,()=>{
     console.log("Connected to Database");
     console.log("Server Listening on port "+port);
 }))
 .catch((err)=>{
-    console.log("Not connected to server");
+    console.log("Not connected to server", err);
 });
